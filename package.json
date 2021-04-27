@@ -1,7 +1,7 @@
 {
   "name": "yf-transfer",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.2",
+  "description": "uni-app 路由转换",
   "main": "src/main.js",
   "scripts": {
     "serve": "node src/main.js",
@@ -11,7 +11,7 @@
     "router": "src/main.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "jesse",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.1"

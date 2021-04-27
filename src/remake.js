@@ -9,13 +9,14 @@ const readPages = JSON.parse(readPagesStr)
 const { pages, subPackages } = readPages
 
 // 重做路由
+pages.map(item => item.path = '/' + item.path)
 const router = pages
 subPackages.forEach(item => {
   item.pages.forEach(subItem => {
-    const _path = item.root + '/' + subItem.path
+    const _path = '/' + item.root + '/' + subItem.path
     router.push({
       ...subItem,
-      _path
+      path: _path
     })
   })
 })
