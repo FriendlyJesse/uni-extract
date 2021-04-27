@@ -1,5 +1,5 @@
 {
-  "name": "transfer",
+  "name": "yf-transfer",
   "version": "1.0.0",
   "description": "",
   "main": "src/main.js",
@@ -7,7 +7,13 @@
     "serve": "node src/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "router": "src/main.js"
+  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1"
+  }
 }

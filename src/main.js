@@ -1,38 +1,21 @@
-const path = require('path')
-const fs = require('fs')
-const config = require('./config')
+#!/usr/bin/env node
 
-const rawdata = fs.readFileSync(config.input)
-const readPagesStr = rawdata.toString().replace(/\/\/.*/g, '')
-const readPages = JSON.parse(readPagesStr)
+const readline = require('readline')
+const chalk = require('chalk')
 
-const { pages, subPackages } = readPages
-
-// 重做路由
-const router = pages
-subPackages.forEach(item => {
-  item.pages.forEach(subItem => {
-    const path = item.root + '/' + subItem.path
-    router.push({
-      ...subItem,
-      path
-    })
-  })
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
 })
+const log = console.log
 
-const data = JSON.stringify(router, null, 2)
-
-const checkDirExist = folderpath => {
-  const pathArr = folderpath.split('/')
-  let _path = '.'
-  pathArr.forEach((item, index) => {
-    if (index === 0 || index === pathArr.length - 1) return
-    _path += `/${item}`
-    if (!fs.existsSync(path.resolve(_path))) {
-      fs.mkdirSync(_path)
-    }
-  })
-}
-checkDirExist(config.output)
-
-fs.writeFileSync(path.resolve(config.output), data)
+rl.question(`${chalk.blue('您需要构建')} ${chalk.red('uni-app')} ${chalk.blue('路由吗?')} ${chalk.red('y/n')}: `, flag => {
+  log(flag)
+  if (flag === 'y') {
+    require('./remake')
+    log(chalk.green('如您所愿~'))
+  } else {
+    log(chalk.green('取消构建'))
+  }
+  rl.close()
+})
