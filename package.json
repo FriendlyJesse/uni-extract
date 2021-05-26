@@ -1,6 +1,6 @@
 {
-  "name": "yf-transfer",
-  "version": "1.0.2",
+  "name": "@friendlyjesse/uni-router",
+  "version": "1.0.0",
   "description": "uni-app 路由转换",
   "main": "src/main.js",
   "scripts": {
@@ -10,7 +10,11 @@
   "bin": {
     "router": "src/main.js"
   },
-  "keywords": [],
+  "keywords": [
+    "uniapp-router",
+    "uniapp 路由转换",
+    "uniapp 路由提取"
+  ],
   "author": "jesse",
   "license": "ISC",
   "dependencies": {
