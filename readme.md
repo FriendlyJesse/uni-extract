@@ -1,6 +1,6 @@
 # 使用
 ```bash
-npm i yj-transfer -g
+npm i @friendlyjesse/uni-extract
 ```
 
 之后再项目下运行：

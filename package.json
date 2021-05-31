@@ -1,7 +1,7 @@
 {
-  "name": "@friendlyjesse/uni-router",
+  "name": "@friendlyjesse/uni-extract",
   "version": "1.0.0",
-  "description": "uni-app 路由转换",
+  "description": "uni-app 路由提取",
   "main": "src/main.js",
   "scripts": {
     "serve": "node src/main.js",
