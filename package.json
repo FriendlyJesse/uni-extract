@@ -1,6 +1,6 @@
 {
   "name": "@friendlyjesse/uni-extract",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "uni-app 路由提取",
   "main": "src/main.js",
   "scripts": {
